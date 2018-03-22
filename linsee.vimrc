@@ -97,6 +97,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 let g:ctrlp_buffer_func = { 'enter': 'MyCtrlPMappings' }
+let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --exclude-standard -co']
 
 func! MyCtrlPMappings()
     nnoremap <buffer> <silent> <c-@> :call <sid>DeleteBuffer()<cr>
